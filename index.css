@@ -1,0 +1,88 @@
+#main-menu {
+    position: fixed;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 20px;
+    z-index: 99999;
+
+    height: max-content;
+
+    background-color: bisque;
+    border-radius: 100px;
+    padding: 15px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#main-menu > .change-color {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+#main-menu > #create-new-note {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+    background-color: darkcyan;
+}
+
+#drag-area {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.notes {
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    resize: both;
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.notes > div {
+    padding: 10px 10px 0;
+    cursor: pointer;
+}
+
+.notes .note-header {
+    width: max-content;
+}
+
+.notes > textarea {
+    padding: 10px 10px 0;
+    background-color: inherit;
+    border: none;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+textarea:focus {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    resize: none;
+}
